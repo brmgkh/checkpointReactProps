@@ -1,6 +1,5 @@
 import React from "react";
-import { Button, Card } from "react-bootstrap";
-
+import { Card, Button } from "react-bootstrap";
 const MovieCard = ({ movie }) => {
   return (
     <Card

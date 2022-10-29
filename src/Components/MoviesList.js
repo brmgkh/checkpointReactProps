@@ -1,12 +1,16 @@
 import React from "react";
 import MovieCard from "../Components/MovieCard";
 
-const MoviesList = ({ movies }) => {
+const MoviesList = ({ movies, title }) => {
   return (
     <div className="MoviesList" style={{ borderRadius: "20px" }}>
-      {movies.map((movie) => (
-        <MovieCard key={movie.id} movie={movie} />
-      ))}
+      {movies
+        .filter((movie) =>
+          movie.title.toLowerCase().includes(title.toLowerCase())
+        )
+        .map((movie) => (
+          <MovieCard key={movie.id} movie={movie} />
+        ))}
     </div>
   );
 };
